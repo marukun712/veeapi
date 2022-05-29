@@ -1,3 +1,3 @@
-# verseapi
-verseの配信スケジュールを取得できるapiです。
+# veeapi
+veeの配信スケジュールを取得できるapiです。
 

@@ -4,22 +4,24 @@ dotenv.config();
 import fs from 'fs'
 import moment from 'moment'
 var member = {
-    'uno': {
-        id: "UCLfAsY3iMUAF2vvDxvIjymQ"
+    'tuna': {
+        id: "UCUdlDvZJGGP78zvta3swIhw"
     },
-    'itsuki': {
-        id: "UCi3aT9cC6YyC0BnOpm2XBEw"
+    'ruki': {
+        id: "UCAUicVZlApAIhcdL9df3gWw"
     },
-    'otoha': {
-        id: "UCYcnLc0n1ryBDZeGWQTVJ_g"
+    'airu': {
+        id: "UCJGQPbaqTY91JhVzD8gIZyw"
     },
-    'sera': {
-        id: "UCvXsXmpMKthJuX8XHbsnOjQ"
+    'ringo': {
+        id: "UCf57-IJn5mUJDyqd9uNEmrg"
     },
-    'maru': {
-        id: "UCOg01LJmZF9UnwFbly73CVw"
+    'kohaku': {
+        id: "UCQLyq7TDKHlmp2Ufd5Z2qMw"
     }
 }
+
+var key = 'AIzaSyBeFemOJejDzELVO1UpGqUFzVdKbZBgdBQ'
 
 var items = []
 
@@ -31,7 +33,7 @@ function req() {
     items.length = 0;
     ids.length = 0;
     times.length = 0;
-    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + member.maru.id + "&key=" + process.env.key + "&eventType=upcoming&type=video")
+    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + member.kohaku.id + "&key=" + key + "&eventType=upcoming&type=video")
         .then(res => res.json())
         .then(json => {
             var num = json.items.length;
@@ -50,7 +52,7 @@ function req() {
             }
         });
 
-    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + member.uno.id + "&key=" + process.env.key + "&eventType=upcoming&type=video")
+    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + member.tuna.id + "&key=" + key + "&eventType=upcoming&type=video")
         .then(res => res.json())
         .then(json => {
             var num = json.items.length;
@@ -69,7 +71,7 @@ function req() {
             }
         });
 
-    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + member.itsuki.id + "&key=" + process.env.key + "&eventType=upcoming&type=video")
+    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + member.ruki.id + "&key=" + key + "&eventType=upcoming&type=video")
         .then(res => res.json())
         .then(json => {
             var num = json.items.length;
@@ -88,7 +90,7 @@ function req() {
             }
         });
 
-    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + member.sera.id + "&key=" + process.env.key + "&eventType=upcoming&type=video")
+    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + member.ringo.id + "&key=" + key + "&eventType=upcoming&type=video")
         .then(res => res.json())
         .then(json => {
             var num = json.items.length;
@@ -107,7 +109,7 @@ function req() {
             }
         });
 
-    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + member.otoha.id + "&key=" + process.env.key + "&eventType=upcoming&type=video")
+    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + member.airu.id + "&key=" + key + "&eventType=upcoming&type=video")
         .then(res => res.json())
         .then(json => {
             var num = json.items.length;
@@ -129,7 +131,7 @@ function req() {
     function gettime() {
         var num = ids.length;
 
-        fetch(`https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=${ids}&key=${process.env.key}`)
+        fetch(`https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=${ids}&key=${key}`)
             .then(res => res.json())
             .then(json => {
                 for (let i = 0; i < num; i++) {

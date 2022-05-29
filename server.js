@@ -1,5 +1,5 @@
 import express from "express";
-var port = 2100
+var port = 2200
 import dotenv from 'dotenv'
 dotenv.config();
 import fs from 'fs'
@@ -26,7 +26,7 @@ const allowCrossDomain = function(req, res, next) {
 }
 app.use(allowCrossDomain)
 
-app.get('/api', function(req, res) {
+app.get('/veeapi', function(req, res) {
     const json = JSON.parse(fs.readFileSync('./res.json', 'utf8'));
     res.json(json)
 })
