@@ -46,7 +46,9 @@ function req() {
                     items: {
                         title: title,
                         image: image,
-                        id: ID
+                        id: ID,
+                        member: '秋雪こはく',
+                        url: `https://www.youtube.com/watch?v=${ID}`
                     }
                 })
             }
@@ -65,7 +67,10 @@ function req() {
                     items: {
                         title: title,
                         image: image,
-                        id: ID
+                        id: ID,
+                        member: 'トゥルシー・ナイトメア',
+                        url: `https://www.youtube.com/watch?v=${ID}`
+
                     }
                 })
             }
@@ -84,7 +89,10 @@ function req() {
                     items: {
                         title: title,
                         image: image,
-                        id: ID
+                        id: ID,
+                        member: '音門るき',
+                        url: `https://www.youtube.com/watch?v=${ID}`
+
                     }
                 })
             }
@@ -103,7 +111,10 @@ function req() {
                     items: {
                         title: title,
                         image: image,
-                        id: ID
+                        id: ID,
+                        member: '九条林檎',
+                        url: `https://www.youtube.com/watch?v=${ID}`
+
                     }
                 })
             }
@@ -122,7 +133,10 @@ function req() {
                     items: {
                         title: title,
                         image: image,
-                        id: ID
+                        id: ID,
+                        member: '雛星あいる',
+                        url: `https://www.youtube.com/watch?v=${ID}`
+
                     }
                 })
             }
