@@ -32,7 +32,7 @@ app.get('/veeapi', function(req, res) {
 })
 
 app.get('/', function(req, res) {
-    res.send('welcome to verseapi')
+    res.send('welcome to veeapi')
 })
 
 
