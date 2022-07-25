@@ -8,7 +8,7 @@ var app = express();
 var server = https.createServer({
     key: fs.readFileSync('/etc/letsencrypt/live/marukunserver.ml/privkey.pem'),
     cert: fs.readFileSync('/etc/letsencrypt/live/marukunserver.ml/cert.pem'),
-    ca:fs.readFileSync('/etc/letsencrypt/live/marukunserver.ml/chain1.pem'),
+    ca:fs.readFileSync('/etc/letsencrypt/live/marukunserver.ml/chain.pem'),
 }, app)
 const allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*')
