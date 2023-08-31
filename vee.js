@@ -1,5 +1,5 @@
-import moment from 'npm:moment'
-import cron from 'npm:node-cron'
+import moment from 'https://deno.land/x/momentjs@2.29.1-deno/mod.ts'
+import { cron } from "https://deno.land/x/simple_cron/mod.ts";
 import { load } from "https://deno.land/std/dotenv/mod.ts";
 
 //envファイルを読み込み
@@ -92,7 +92,9 @@ async function Fetch() {
         console.log(e)
     }
 }
+Fetch();
 
-cron.schedule('0 0 */12 * * *', () => {
+const task = cron('* * */12 * * *', () => {
     Fetch();
 });
+
