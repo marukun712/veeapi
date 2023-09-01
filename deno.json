@@ -1,0 +1,5 @@
+{
+    "tasks": {
+        "run": "deno run --allow-read --allow-net --allow-env server.js & deno run --allow-read --allow-net --allow-read --allow-env crawler.js"
+    }
+}

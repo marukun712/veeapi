@@ -7,4 +7,6 @@ app.use(async (ctx) => {
     ctx.response.body = json;
 })
 
-await app.listen({ port: 8000 });
+await app.listen({ port: 8000 }, () => {
+    console.log("8000番で開始")
+});
