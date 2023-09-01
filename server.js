@@ -1,9 +1,9 @@
-import { Application } from 'https://deno.land/x/oak/mod.ts';
+import { Application } from 'https://deno.land/x/oak@v12.6.1/mod.ts';
 
 const app = new Application();
 
 app.use(async (ctx) => {
-    let json = await Deno.readTextFile("./res.json");
+    const json = await Deno.readTextFile("./res.json");
     ctx.response.body = json;
 })
 
