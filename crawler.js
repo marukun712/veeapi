@@ -94,7 +94,7 @@ async function Fetch() {
 }
 Fetch();
 
-const task = cron('* * */12 * * *', () => {
+const task = cron('0 0 */12 * * *', () => {
     Fetch();
 });
 
